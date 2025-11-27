@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: frontend-blue-green
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/your-user/your-repo.git
+    targetRevision: main
+    path: k8s        # folder containing the YAMLs above
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

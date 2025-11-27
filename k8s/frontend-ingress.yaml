@@ -5,13 +5,12 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: myfrontend.example.com   # or your MicroK8s host/IP
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: frontend-blue   # change to frontend-green to flip traffic
+                name: frontend-blue
                 port:
                   number: 80

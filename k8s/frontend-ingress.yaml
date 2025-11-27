@@ -11,6 +11,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: frontend-blue
+                name: frontend-green
                 port:
                   number: 80

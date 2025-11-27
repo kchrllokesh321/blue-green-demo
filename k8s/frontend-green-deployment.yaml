@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: lokesh86186/blue-green-green:v2
+          image: lokesh86186/blue-green-green:v3
           ports:
             - containerPort: 80

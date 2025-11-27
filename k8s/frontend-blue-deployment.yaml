@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: your-registry/frontend-blue:v1
+          image: lokesh86186/blue-green-blue:v1
           ports:
             - containerPort: 80

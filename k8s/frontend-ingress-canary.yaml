@@ -4,7 +4,7 @@ metadata:
   name: frontend-ingress-canary
   annotations:
     nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-weight: "0%"   # 20% traffic to green
+    nginx.ingress.kubernetes.io/canary-weight: "50%"   # 20% traffic to green
 spec:
   ingressClassName: nginx
   rules:
